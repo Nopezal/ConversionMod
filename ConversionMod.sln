@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.21901.1
+VisualStudioVersion = 14.0.22129.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversionMod", "ConversionMod\ConversionMod.csproj", "{D8010413-661D-4011-91DE-76EFFC13B394}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversionMod", "ConversionMod.csproj", "{D8010413-661D-4011-91DE-76EFFC13B394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

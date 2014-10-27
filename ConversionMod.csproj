@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConversionMod</RootNamespace>
-    <AssemblyName>%24safeprojectname%24</AssemblyName>
+    <AssemblyName>ConversionMod</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <WarningLevel>4</WarningLevel>
@@ -50,37 +50,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Items\Corruption\Soul Splitter.cs" />
-    <Compile Include="Items\Corruption\Wrath Of Bullets.cs" />
-    <Compile Include="Items\Corruption\Pandoras Box.cs" />
-    <Compile Include="Items\Corruption\Purplified Summon Tome.cs" />
-    <Compile Include="Items\Crimson\Bloody Star.cs" />
-    <Compile Include="Items\Crimson\Cremesinial Rod.cs" />
-    <Compile Include="Items\Crimson\Gorinder.cs" />
-    <Compile Include="Items\Crimson\Hunting Repeater.cs" />
-    <Compile Include="Mod.cs" />
-    <Compile Include="ModNet.cs" />
-    <Compile Include="ModPlayer.cs" />
-    <Compile Include="ModWorld.cs" />
-    <Compile Include="Projectiles\Cremenisial Creature.cs" />
+    <Compile Include="API\ConversibleBiome.cs" />
+    <Compile Include="ConversionMod.cs" />
+    <Compile Include="MNet.cs" />
+    <Compile Include="MPlayer.cs" />
+    <Compile Include="MWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\MUI.cs" />
     <Compile Include="UI\OrbLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ModInfo.json" />
-    <None Include="Projectiles\Bloody Star.json" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Items\Dark Matter\" />
-    <Folder Include="Items\Hallow\" />
+    <Content Include="Images\ChargingOrb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>mct compile "$(ProjectDir)"</PostBuildEvent>
+    <PostBuildEvent>mct compile "$(ProjectName)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

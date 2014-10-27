@@ -2,30 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
-using TAPI;
 using Terraria;
+using TAPI;
 
-namespace ConversionMod
+namespace ConversionMod.Projectiles
 {
-    class CremenisialCreature : ModProjectile
+    public sealed class CremenisialCreature : ModProjectile
     {
-        public CremenisialCreature(ModBase mb, Projectile P) : base(mb, P) { }
-
-        Player owner = Main.localPlayer;
-
+        Projectile p
+        {
+            get
+            {
+                return projectile;
+            }
+        }
 
         public override void AI()
         {
-            Projectile P = this.projectile;
             float timer = 240;
 
             foreach (NPC element in Main.npc)
             {
                 Vector2 oldVel = element.velocity;
+
                 for (int i = 0; i < timer; i++)
                 {
-                    if(i == timer)
-                        Projectile.NewProjectile(P.position, oldVel, "ConversionMod:SpikeballOfFlesh", 76, 1, owner.whoAmI);
+                    if (i == timer)
+                        Projectile.NewProjectile(p.position, oldVel, "ConversionMod:SpikeballOfFlesh", 76, 1, p.owner);
                 }
             }
         }
