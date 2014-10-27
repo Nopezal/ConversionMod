@@ -1,0 +1,13 @@
+﻿{
+    "displayName": "The Conversion Mod",
+    "author": "Nopezal",
+    "version": "0.00000000000000000001",
+    "info": "Mod wich is used to convert yourself to a biome.",
+    
+    "internalName": "ConversionMod",
+
+    "MSBuild": true,
+    "msBuildFile": "$(ProjectPath)",
+
+    "includePDB": true
+}

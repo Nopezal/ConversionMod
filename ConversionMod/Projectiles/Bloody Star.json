@@ -1,0 +1,8 @@
+﻿{
+    "code": "BloodyStar",
+    "size": [32, 32],
+    "damage": 0, //handled by code
+    "penetrate": 0,
+    "knockback": 0,
+    "displayName": "Bloody Star"
+}
