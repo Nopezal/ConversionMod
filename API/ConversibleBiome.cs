@@ -30,7 +30,7 @@ namespace ConversionMod.API
         {
             return biomes[internalName];
         }
-
+        
         internal static void LoadVanilla()
         {
             biomes.Add("Vanilla:Corruption", new Corruption());

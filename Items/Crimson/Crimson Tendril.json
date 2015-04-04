@@ -1,0 +1,14 @@
+{
+    "displayName": "Crimson Tendril",
+    "tooltip": ["Inflicts the opponent with a deadly virus wich spreads around it", "Reacts weirdly to a dark enhancer..."],
+    "useStyle": 1,
+    "useTime": 6,
+    "maxStack": 1,
+    "damage": 1,
+    "scale": 1,
+    "size": [64, 64],
+    "knockback": 0,
+    "rare": 4,
+    "melee": true,
+    "useSound": 1
+}

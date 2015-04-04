@@ -1,0 +1,10 @@
+{
+    "displayName": "Red Plague",
+    "tip": "You feel very bad...",
+    "debuff": true,
+    "vanityPet": false,
+    "lightPet": false,
+    "enchantment": false,
+    "noTimer": false,
+    "noSave": false
+}

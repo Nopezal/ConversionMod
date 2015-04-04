@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -16,6 +16,18 @@ namespace ConversionMod
             current   = null,
             old       = null;
 
+        public override void Save(BinBuffer bb)
+        {
+            bb.Write(ConversionQuest.Prestige);
+            bb.Write(OrbLayer.orbColour);
+        }
+
+        public override void Load(BinBuffer bb)
+        {
+            bb.ReadInt();
+            bb.ReadColor();
+        }
+
         public override void MidUpdate()
         {
             U_BiomeColour();
@@ -28,7 +40,7 @@ namespace ConversionMod
 
             current = null;
             foreach (var cb in ConversibleBiome.biomes.Values)
-                if (cb.Biome.Check(player))
+                if (cb.Biome.Check(player) )
                 {
                     current = cb;
                     break;
@@ -38,8 +50,13 @@ namespace ConversionMod
             {
                 if (current != null)
                 {
-                    if (OrbLayer.orbColour.A < 255)
+                    if (OrbLayer.orbColour.A < 255 && OrbLayer.orbColour.A < ConversionQuest.Prestige)
                     {
+                        int particlesSpawned = 0;
+                        for (int i = particlesSpawned; i <= ConversionQuest.Prestige; i++)
+                        {
+                            particlesSpawned = ConversionQuest.Prestige;
+                        }
                         byte a = OrbLayer.orbColour.A;
                         OrbLayer.orbColour = Color.Lerp(old == null ? Color.White : old.Colour, current.Colour, 1f / 255f);
                         OrbLayer.orbColour.A = ++a;
@@ -47,7 +64,7 @@ namespace ConversionMod
                     else
                         old = current;
                 }
-                else if (OrbLayer.orbColour.A > 0)
+                else
                 {
                     OrbLayer.orbColour.A--;
 
@@ -58,3 +75,4 @@ namespace ConversionMod
         }
     }
 }
+*/
